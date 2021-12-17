@@ -6,15 +6,25 @@ proj:
   name: test-intern
   environment: testing
   enabled: false
-  api:
-    - key: {
-      currencykey: "e959952041104d32a28d938729bcffbf",
-      gifkey: "17SnwbepiIKuHeTg4yOxDk06QIbCZCe7"
-    }
-    - links: {
-      currencylink: "https://openexchangerates.org/api/latest.json?app_id=",
-      giflink: "https://api.giphy.com/v1/gifs/random?api_key="
-    }
+#  api:
+#    - key: {
+#      currencykey: "e959952041104d32a28d938729bcffbf",
+#      gifkey: "17SnwbepiIKuHeTg4yOxDk06QIbCZCe7"
+#    }
+#    - links: {
+#      currencylink: "https://openexchangerates.org/api/latest.json?app_id=",
+#      giflink: "https://api.giphy.com/v1/gifs/random?api_key="
+#    }
+
+  apikey: {
+    currency: "?app_id=e959952041104d32a28d938729bcffbf",
+    gif: "?api_key=17SnwbepiIKuHeTg4yOxDk06QIbCZCe7"
+  }
+
+  apilinks: {
+    currency: "https://openexchangerates.org/api/", #app_id=
+    gif: "https://api.giphy.com/v1/gifs/random" #?api_key=
+  }
 
   resources:
     - https://giphy.com/search/rich

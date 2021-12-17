@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import per.ami.alpha.config.AppConfig;
 import per.ami.alpha.service.CurrencyService;
 
+import java.io.IOException;
+
 @RestController
 public class CurrencyController {
 
@@ -19,7 +21,7 @@ public class CurrencyController {
 //    private MockMvc mockMvc;
 
     @GetMapping(value = "/info")
-    public ResponseEntity<String> showGif(@RequestParam("currency") String currency) {
+    public ResponseEntity<String> showGif(@RequestParam("currency") String currency) throws IOException {
 //        currencyService.getGif(currency);
 
         return ResponseEntity.ok().body("<img src=" + currencyService.getGif(currency) + " alt=\"Funny image\">");//.body(message);
