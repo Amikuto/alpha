@@ -6,11 +6,12 @@ proj:
   name: test-intern
   environment: testing
   enabled: false
+  appid: "e959952041104d32a28d938729bcffbf"
   resources:
     - https://giphy.com/search/rich
     - https://giphy.com/search/broke
     - https://docs.openexchangerates.org/
-  base: USD
+  base: "USD"
   currencies: {
     AED: "United Arab Emirates Dirham",
     AFN: "Afghan Afghani",

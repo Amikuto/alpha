@@ -16,6 +16,8 @@ public class AppConfig {
     private String name;
     private String environment;
     private boolean enabled;
+    private char[] appid;
+    private String base;
     private List<String> resources = new ArrayList<>();
     private Map<String, String> currencies;
 
@@ -41,6 +43,22 @@ public class AppConfig {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public char[] getAppid() {
+        return appid;
+    }
+
+    public void setAppid(char[] appid) {
+        this.appid = appid;
+    }
+
+    public String getBase() {
+        return base;
+    }
+
+    public void setBase(String base) {
+        this.base = base;
     }
 
     public List<String> getResources() {
