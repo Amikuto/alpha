@@ -9,7 +9,7 @@ import per.ami.alpha.service.CurrencyService;
 import java.io.IOException;
 
 @RestController
-public class CurrencyController {
+public class AppController {
 
     @Autowired
     AppConfig appConfig;
@@ -22,9 +22,8 @@ public class CurrencyController {
 
     @GetMapping(value = "/info")
     public ResponseEntity<String> showGif(@RequestParam("currency") String currency) throws IOException {
-//        currencyService.getGif(currency);
 
-        return ResponseEntity.ok().body("<img src=" + currencyService.getGif(currency) + " alt=\"Funny image\">");//.body(message);
+        return ResponseEntity.ok().body("<img src=" + currencyService.getGif(currency) + " alt=\"Funny image\">");
     }
 
 

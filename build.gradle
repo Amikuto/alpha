@@ -14,18 +14,30 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-    implementation group: 'org.yaml', name: 'snakeyaml'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
-    // https://mvnrepository.com/artifact/org.json/json
-    implementation group: 'org.json', name: 'json', version: '20211205'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0'
+    // to parse yaml files
+    implementation group: 'org.yaml', name: 'snakeyaml'
 
+    // to write web layer
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // to write web client using OpenFeign
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '3.1.0'
+
+    // to write test class using junit jupiter
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // to write integration test and mock stub using WireMock
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-contract-stub-runner', version: '3.1.0'
+
+    // to parse json
+    implementation group: 'org.json', name: 'json', version: '20211205'
+//    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.0'
+
+    // lombok
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 }

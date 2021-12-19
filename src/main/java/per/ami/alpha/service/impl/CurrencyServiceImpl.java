@@ -36,7 +36,7 @@ public class CurrencyServiceImpl implements CurrencyService {
     @Override
     public String getGif(String currency) throws IOException {
 
-        System.out.println(appConfig.getCurrencyinfo().getNames().get(currency));
+//        System.out.println(appConfig.getCurrencyinfo().getNames().get(currency));
 
 
         DateTimeFormatter formmat = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH);
@@ -50,8 +50,8 @@ public class CurrencyServiceImpl implements CurrencyService {
 
         String yest = appConfig.getApilinks().get("currency") + type2 + appConfig.getApikey().get("currency");
         String today = appConfig.getApilinks().get("currency") + type + appConfig.getApikey().get("currency");
-        System.out.println(yest);
-        System.out.println(today);
+//        System.out.println(yest);
+//        System.out.println(today);
 
         String tag;
         float currYesterday = CurrencyParser.parse(httpPoster.sendPost(yest), currency);
