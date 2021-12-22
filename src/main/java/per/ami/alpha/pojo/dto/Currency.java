@@ -2,9 +2,13 @@ package per.ami.alpha.pojo.dto;
 
 import lombok.Data;
 
+import java.util.Map;
+
 @Data
 public class Currency {
-    private String shortName;
-    private String fullName;
-    private Float cost;
+    String disclaimer;
+    String license;
+    Long timestamp;
+    String base;
+    Map<String, Float> rates;
 }

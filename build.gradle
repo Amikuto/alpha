@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'junit:junit:4.13.1'
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
     // to parse yaml files
@@ -40,6 +41,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testImplementation "com.github.tomakehurst:wiremock-jre8:2.32.0"
 }
 
 test {

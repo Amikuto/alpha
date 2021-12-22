@@ -1,13 +1,9 @@
 package per.ami.alpha.pojo.dto;
 
-import lombok.*;
+import lombok.Data;
 
 @Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class Gif {
-
-    private String url;
-//    private String errorMsg;
+    Object data;
+    Object meta;
 }
