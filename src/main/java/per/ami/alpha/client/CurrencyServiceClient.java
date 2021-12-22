@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import per.ami.alpha.pojo.dto.Currency;
 
-import java.time.LocalDateTime;
-
 @FeignClient(name = "currency-service", url = "https://openexchangerates.org/api/")
 public interface CurrencyServiceClient {
 

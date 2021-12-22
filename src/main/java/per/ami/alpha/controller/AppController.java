@@ -1,13 +1,11 @@
 package per.ami.alpha.controller;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import per.ami.alpha.client.CurrencyServiceClient;
-import per.ami.alpha.service.CurrencyService;
+import per.ami.alpha.client.GifServiceClient;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -33,6 +31,9 @@ public class AppController {
     @Autowired
     CurrencyServiceClient currencyServiceClient;
 
+    @Autowired
+    GifServiceClient gifServiceClient;
+
     @GetMapping("/getLastCurrency")
     public ResponseEntity<?> getLastCurrency() {
         return ResponseEntity.ok(currencyServiceClient.getLastCurrencies());
@@ -44,5 +45,10 @@ public class AppController {
         LocalDateTime ldt2 = LocalDateTime.now().minusDays(1);
         String date = formmat.format(ldt2);
         return ResponseEntity.ok(currencyServiceClient.getYesterdayCurrencies(date));
+    }
+
+    @GetMapping("/api/info")
+    public ResponseEntity<?> getGif() {
+        return ResponseEntity.ok(gifServiceClient.getGif("rich"));
     }
 }
