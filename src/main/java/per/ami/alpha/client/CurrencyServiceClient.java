@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import per.ami.alpha.pojo.dto.Currency;
 
-@FeignClient(name = "currency-service", url = "https://openexchangerates.org/api/")
+@FeignClient(name = "${app.feign.config.name.currency}", url = "${app.feign.config.url.currency}")
 public interface CurrencyServiceClient {
 
-    @RequestMapping(value = "/latest.json?app_id=e959952041104d32a28d938729bcffbf", method = RequestMethod.GET)
-    public Currency getLastCurrencies();
+    @RequestMapping(value = "/latest.json?app_id=${app.feign.config.token.currency}", method = RequestMethod.GET)
+    Currency getLastCurrencies();
 
-    @RequestMapping(value = "/historical/{date}.json?app_id=e959952041104d32a28d938729bcffbf", method = RequestMethod.GET)
-    public Currency getYesterdayCurrencies(@PathVariable String date);
+    @RequestMapping(value = "/historical/{date}.json?app_id=${app.feign.config.token.currency}", method = RequestMethod.GET)
+    Currency getYesterdayCurrencies(@PathVariable String date);
 }
