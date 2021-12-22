@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import per.ami.alpha.client.CurrencyServiceClient;
 import per.ami.alpha.client.GifServiceClient;
+import per.ami.alpha.service.ApiService;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -34,6 +35,9 @@ public class AppController {
     @Autowired
     GifServiceClient gifServiceClient;
 
+    @Autowired
+    ApiService apiService;
+
     @GetMapping("/getLastCurrency")
     public ResponseEntity<?> getLastCurrency() {
         return ResponseEntity.ok(currencyServiceClient.getLastCurrencies());
@@ -47,8 +51,18 @@ public class AppController {
         return ResponseEntity.ok(currencyServiceClient.getYesterdayCurrencies(date));
     }
 
-    @GetMapping("/api/info")
+    @GetMapping("/getGif")
     public ResponseEntity<?> getGif() {
         return ResponseEntity.ok(gifServiceClient.getGif("rich"));
+    }
+
+    @GetMapping("/api/info")
+    public ResponseEntity<?> getInfoGif(@RequestParam("currency") String currency) {
+        return ResponseEntity.ok(apiService.getPage(currency));
+    }
+
+    @GetMapping("/api/string/info")
+    public ResponseEntity<?> getInfoGifString(@RequestParam("currency") String currency) {
+        return ResponseEntity.ok(apiService.getStringPage(currency));
     }
 }
