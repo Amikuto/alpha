@@ -1,0 +1,18 @@
+client:
+  post:
+    baseUrl: http://localhost:9091
+
+app:
+  feign:
+    config:
+      name:
+        project: ami
+        currency: currency-service
+        gif: gif-service
+      url:
+        currency: https://openexchangerates.org/api/
+        gif: https://api.giphy.com/v1/gifs/
+      token:
+        currency: e959952041104d32a28d938729bcffbf
+        gif: 17SnwbepiIKuHeTg4yOxDk06QIbCZCe7
+      base: USD
