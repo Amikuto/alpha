@@ -1,7 +1,5 @@
 package per.ami.alpha.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import per.ami.alpha.client.CurrencyServiceClient;
 import per.ami.alpha.client.GifServiceClient;
@@ -16,12 +14,13 @@ import java.util.Locale;
 @Service
 public class ApiServiceImpl implements ApiService {
 
-//    @Qualifier("currencyServiceClientFallback")
-    @Autowired
     CurrencyServiceClient currencyServiceClient;
-
-    @Autowired
     GifServiceClient gifServiceClient;
+
+    ApiServiceImpl(CurrencyServiceClient currencyServiceClient, GifServiceClient gifServiceClient) {
+        this.currencyServiceClient = currencyServiceClient;
+        this.gifServiceClient = gifServiceClient;
+    }
 
     @Override
     public InfoPage getPage(String currency) {
