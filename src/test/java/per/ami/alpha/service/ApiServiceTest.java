@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import per.ami.alpha.client.CurrencyServiceClient;
 import per.ami.alpha.client.GifServiceClient;
-import per.ami.alpha.pojo.dto.Currency;
 import per.ami.alpha.pojo.dto.CurrencyTestData;
 import per.ami.alpha.pojo.dto.GifTestData;
 import per.ami.alpha.pojo.dto.InfoPage;

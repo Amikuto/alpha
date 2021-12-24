@@ -1,23 +1,28 @@
 package per.ami.alpha.pojo.dto;
 
-import lombok.Data;
+import lombok.*;
 
 import java.util.Map;
 
 @Data
+@RequiredArgsConstructor
+@NoArgsConstructor
 public class Gif {
+    @NonNull
     private GifData data;
     private Meta meta;
 
     @Data
-    public class Meta {
+    public static class Meta {
         private String msg;
         private long status;
         private String response_id;
     }
 
     @Data
-    public class GifData {
+    @RequiredArgsConstructor
+    @NoArgsConstructor
+    public static class GifData {
         private String type;
         private String id;
         private String url;
@@ -35,16 +40,20 @@ public class Gif {
         private long is_sticker;
         private String import_datetime;
         private String trending_datetime;
+        @NonNull
         private GifImages images;
         private User user;
 
         @Data
-        public class GifImages {
+        @NoArgsConstructor
+        @RequiredArgsConstructor
+        public static class GifImages {
+            @NonNull
             private Map<String, String> original;
         }
 
         @Data
-        public class User {
+        public static class User {
             private String avatarURL;
             private String bannerImage;
             private String bannerURL;

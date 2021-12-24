@@ -1,7 +1,6 @@
 package per.ami.alpha.pojo.dto;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -14,10 +13,6 @@ public class CurrencyTestData {
         rates.put("RATE3", 3f);
 
         return new Currency("disclaimer", "license", 123L, "base", rates);
-    }
-
-    public static List<Currency> currencies() {
-        return List.of(currency());
     }
 
 }

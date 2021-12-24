@@ -10,8 +10,8 @@ import per.ami.alpha.utils.MyDateFormatter;
 @Service
 public class ApiServiceImpl implements ApiService {
 
-    CurrencyServiceClient currencyServiceClient;
-    GifServiceClient gifServiceClient;
+    private final CurrencyServiceClient currencyServiceClient;
+    private final GifServiceClient gifServiceClient;
 
     ApiServiceImpl(CurrencyServiceClient currencyServiceClient, GifServiceClient gifServiceClient) {
         this.currencyServiceClient = currencyServiceClient;
