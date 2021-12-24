@@ -1,7 +1,3 @@
-client:
-  post:
-    baseUrl: http://localhost:9091
-
 app:
   feign:
     config:
@@ -10,8 +6,8 @@ app:
         currency: currency-service
         gif: gif-service
       url:
-        currency: https://openexchangerates.org/api/
-        gif: https://api.giphy.com/v1/gifs/
+        currency: http://localhost:9091
+        gif: http://localhost:9091
       token:
         currency: e959952041104d32a28d938729bcffbf
         gif: 17SnwbepiIKuHeTg4yOxDk06QIbCZCe7
