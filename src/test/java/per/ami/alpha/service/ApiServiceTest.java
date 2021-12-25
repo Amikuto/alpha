@@ -40,10 +40,4 @@ class ApiServiceTest {
         assertThat(page.getGif()).isEqualTo("testurl");
         assertThat(page.getType()).isEqualTo("broke");
     }
-
-    @Test
-    void getStringPage() {
-        String page = apiService.getStringPage("RATE1");
-        assertThat(page).isEqualTo("<p>Type: broke</p><img src=testurl alt=\"No image :c\">");
-    }
 }

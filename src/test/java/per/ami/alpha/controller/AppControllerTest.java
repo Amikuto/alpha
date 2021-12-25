@@ -36,15 +36,4 @@ class AppControllerTest {
                 .andExpect(jsonPath("$.gif", equalTo("testurl")))
                 .andExpect(jsonPath("$.type", equalTo("broke")));
     }
-
-    @Test
-    void getInfoGifString() throws Exception {
-        when(service.getStringPage(anyString())).thenReturn(InfoPageTestData.infoPageString());
-
-        mockMvc.perform(get("/api/string/info")
-                        .param("currency", "RATE1"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType("text/plain;charset=UTF-8"))
-                .andExpect(content().string("<p>Type: broke</p><img src=testurl alt=\"No image :c\">"));
-    }
 }
