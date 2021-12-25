@@ -48,6 +48,9 @@
 3. Запустите образ (docker run -d --name currency-server -p 8080:8080 currency-service)
 4. Проверьте работу сервера при помощи запроса (http://localhost:8080/api/info?currency=RUB)
 
+<h2> Heroku </h2>
+
+* Данный сервис был задеплоен на платформу Heroku. Достучаться до него можно по ссылочке - https://currency-app.herokuapp.com/api/info?currency=RUB
 
 <h2> Author </h2>
 
