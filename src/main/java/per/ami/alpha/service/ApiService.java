@@ -4,5 +4,4 @@ import per.ami.alpha.pojo.dto.InfoPage;
 
 public interface ApiService {
     InfoPage getPage(String currency);
-    String getStringPage(String currency);
 }

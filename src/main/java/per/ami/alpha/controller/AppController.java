@@ -17,9 +17,4 @@ public class AppController {
     public ResponseEntity<?> getInfoGif(@RequestParam("currency") String currency) {
         return ResponseEntity.ok(apiService.getPage(currency));
     }
-
-    @GetMapping("/api/string/info")
-    public ResponseEntity<?> getInfoGifString(@RequestParam("currency") String currency) {
-        return ResponseEntity.ok(apiService.getStringPage(currency));
-    }
 }
