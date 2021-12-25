@@ -7,7 +7,7 @@
 + отвечает json файлом с данными (ссылка с гифкой и ее тип):
   * если наша валюта стала дешевле - в этом случае тип broke
   * если наша валюта стала дороже - тип rich
-  
+  ![img.png](media/img.png)
   
 <h2> Используемые сторонние сервисы</h2>
 
@@ -16,7 +16,7 @@
   
 
 <h2> Приложение использует </h2>
-
+  
 + gradle
 + spring-boot-web
 + openfeign
@@ -45,7 +45,7 @@
 
 1. Перейдите в папку с проектом
 2. Создайте образ (docker build -t currency-service .)
-3. Запустите образ (docker run -d -p 8080:8080 currency-service)
+3. Запустите образ (docker run -d --name currency-server -p 8080:8080 currency-service)
 4. Проверьте работу сервера при помощи запроса (http://localhost:8080/api/info?currency=RUB)
 
 

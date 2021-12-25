@@ -35,7 +35,7 @@ public class ApiServiceImpl implements ApiService {
 
         String gifUrl = gifServiceClient.getGif(gifType).getData().getImages().getOriginal().get("url");
         InfoPage infoPage = InfoPage.builder().gif(gifUrl).type(gifType).build();
-        log.info("\nТекущая гиффка: " + infoPage.getGif() + "\nТип: " + infoPage.getType());
+        log.info("\ngif url: " + infoPage.getGif() + "\ntype: " + infoPage.getType());
         return infoPage;
     }
 }

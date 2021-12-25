@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine3.14
+FROM openjdk:11-slim
 EXPOSE 8080
 
 WORKDIR /
