@@ -1,1 +1,1 @@
-web: java -Dserver.port=5000 -jar build/libs/alpha.jar
+web: java -jar build/libs/alpha.jar
