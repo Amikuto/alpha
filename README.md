@@ -28,7 +28,7 @@
 
 1. Скачайте и установите Java11
 2. Скачайте проект (git clone https://github.com/Amikuto/alpha.git)
-3. Соберите проект (./gradlew run)
+3. Соберите проект (./gradlew build)
 4. Создастся папка build. Откройте ее в терминале (cd .\build\libs\)
 5. Запустите jar файл (java -jar alpha.jar)
 6. Проверьте работу сервера при помощи запроса (http://localhost:8080/api/info?currency=RUB)
