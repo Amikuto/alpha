@@ -1,11 +1,6 @@
 # Currency info
 
-<h2> Information and reference system of store </h2>
-
-This application is a convenient tool for employees of an organization,
-as it has the ability to quickly change product data, create promotional codes,
-assign purchases to customers and generate receipts - the main historical data with which it is convenient to
-conduct analytics later.
+<h2> Информация об изменении валют </h2>
 
 
 <h2> Что делает это приложение? </h2>
