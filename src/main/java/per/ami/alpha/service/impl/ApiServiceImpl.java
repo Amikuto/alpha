@@ -1,5 +1,6 @@
 package per.ami.alpha.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import per.ami.alpha.client.CurrencyServiceClient;
 import per.ami.alpha.client.GifServiceClient;
@@ -7,6 +8,7 @@ import per.ami.alpha.pojo.dto.InfoPage;
 import per.ami.alpha.service.ApiService;
 import per.ami.alpha.utils.MyDateFormatter;
 
+@Slf4j
 @Service
 public class ApiServiceImpl implements ApiService {
 
@@ -20,7 +22,9 @@ public class ApiServiceImpl implements ApiService {
 
     @Override
     public InfoPage getPage(String currency) {
-        return getGifUrl(currency);
+        InfoPage infoPage = getGifUrl(currency);
+        log.info("\nТекущая гиффка: " + infoPage.getGif() + "\nТип: " + infoPage.getType());
+        return infoPage;
     }
 
     @Override

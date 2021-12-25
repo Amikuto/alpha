@@ -12,3 +12,6 @@ app:
         currency: e959952041104d32a28d938729bcffbf
         gif: 17SnwbepiIKuHeTg4yOxDk06QIbCZCe7
       base: USD
+
+logging:
+  level.: INFO
